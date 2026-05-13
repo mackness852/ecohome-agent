@@ -2,8 +2,9 @@
 Tools for EcoHome Energy Advisor Agent
 """
 import os
-import json
+import dotenv
 import random
+from urllib.parse import quote
 from datetime import datetime, timedelta
 from typing import Dict, Any
 from langchain_core.tools import tool
@@ -15,6 +16,7 @@ from models.energy import DatabaseManager
 
 # Initialize database manager
 db_manager = DatabaseManager()
+dotenv.load_dotenv()
 
 # TODO: Implement get_weather_forecast tool
 @tool
@@ -50,13 +52,34 @@ def get_weather_forecast(location: str, days: int = 3) -> Dict[str, Any]:
             ]
         }
     """
-    # Mock weather API or call OpenWeatherMap or similar
     
-    return 
+    return {
+        "location": f"{location}",
+        "forecast_days": f"{days}",
+        "current": {
+            "temperature_c": random.randint(5, 25),
+            "condition": random.choice(["sunny", "partly_cloudy", "cloudy"]),
+            "humidity": random.randint(40, 95),
+            "wind_speed": round(random.uniform(0, 80), 1)
+        },
+        "hourly": [
+            {
+                "hour": hour,
+                "temperature_c": random.randint(5, 25),
+                "condition": random.choice(["sunny", "partly_cloudy", "cloudy"]),
+                "solar_irradiance": round(random.uniform(0, 1000), 1) if 6 <= hour <= 20 else 0,
+                "humidity": random.randint(40, 95),
+                "wind_speed": round(random.uniform(0, 80), 1)
+            }
+            for hour in range(24)
+        ]
+    }
+
+
 
 # TODO: Implement get_electricity_prices tool
 @tool
-def get_electricity_prices(date: str = None) -> Dict[str, Any]:
+def get_electricity_prices(date: str = "") -> Dict[str, Any]:
     """
     Get electricity prices for a specific date or current day.
     
@@ -90,7 +113,38 @@ def get_electricity_prices(date: str = None) -> Dict[str, Any]:
     # Peak normally between 6 and 22...
     # demand_charge should be 0 if off-peak
 
-    return 
+    return {
+        "date": f"{date}",
+        "pricing_type": "time_of_use",
+        "currency": "USD",
+        "unit": "per_kWh",
+        "hourly_rates": [
+            {"hour": 0, "rate": 0.0823, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 1, "rate": 0.0791, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 2, "rate": 0.0768, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 3, "rate": 0.0754, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 4, "rate": 0.0782, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 5, "rate": 0.0815, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 6, "rate": 0.1432, "period": "peak", "demand_charge": 2.45},
+            {"hour": 7, "rate": 0.1587, "period": "peak", "demand_charge": 2.68},
+            {"hour": 8, "rate": 0.1623, "period": "peak", "demand_charge": 2.71},
+            {"hour": 9, "rate": 0.1498, "period": "peak", "demand_charge": 2.52},
+            {"hour": 10, "rate": 0.1376, "period": "peak", "demand_charge": 2.31},
+            {"hour": 11, "rate": 0.1412, "period": "peak", "demand_charge": 2.38},
+            {"hour": 12, "rate": 0.1465, "period": "peak", "demand_charge": 2.47},
+            {"hour": 13, "rate": 0.1521, "period": "peak", "demand_charge": 2.56},
+            {"hour": 14, "rate": 0.1554, "period": "peak", "demand_charge": 2.61},
+            {"hour": 15, "rate": 0.1612, "period": "peak", "demand_charge": 2.69},
+            {"hour": 16, "rate": 0.1738, "period": "peak", "demand_charge": 2.91},
+            {"hour": 17, "rate": 0.1856, "period": "peak", "demand_charge": 3.12},
+            {"hour": 18, "rate": 0.1912, "period": "peak", "demand_charge": 3.24},
+            {"hour": 19, "rate": 0.1843, "period": "peak", "demand_charge": 3.09},
+            {"hour": 20, "rate": 0.1687, "period": "peak", "demand_charge": 2.83},
+            {"hour": 21, "rate": 0.1534, "period": "peak", "demand_charge": 2.58},
+            {"hour": 22, "rate": 0.0967, "period": "off_peak", "demand_charge": 0.0},
+            {"hour": 23, "rate": 0.0876, "period": "off_peak", "demand_charge": 0.0}
+        ]
+    }
 
 @tool
 def query_energy_usage(start_date: str, end_date: str, device_type: str = None) -> Dict[str, Any]:

@@ -1,0 +1,19 @@
+Right-size your solar array to your actual load profile, not maximum possible output. Excess generation you can't use or store is wasted.
+
+Install an energy monitor before you install panels. Know your consumption curve first — most household load falls in the evening, outside solar hours.
+
+Use a diverter controller to redirect surplus solar to immersion heaters or EV chargers instead of exporting at low feed-in rates. Payback is often under a year.
+
+Pair panels with a heat pump rather than resistance heating. Heat pumps deliver 3–4 kWh of heat per 1 kWh consumed; resistance heaters deliver 1:1.
+
+Consider an east-west panel split rather than pure south-facing. Lower peak output but generation spreads across more hours, improving self-consumption without storage.
+
+Monitor inverter performance weekly. A single failed panel can silently drag down an entire string without triggering any alarm.
+
+Register for the Smart Export Guarantee (UK). Rates vary by supplier — review annually, they've shifted significantly.
+
+Add small-scale wind generation in locations with genuine wind resource. Wind complements solar seasonally, particularly in Scottish winters.
+
+Explore virtual power plant or aggregator schemes. Some suppliers pay you to discharge or charge your battery at grid-optimal moments.
+
+Plan for panel degradation of 0.5–0.7% per year. Output will be roughly 15% lower by year 25 — size your array accordingly, not just for year one.

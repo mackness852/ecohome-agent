@@ -16,7 +16,7 @@ class Agent:
             model=model,
             temperature=0.0,
             base_url="https://openai.vocareum.com/v1",
-            api_key=os.getenv("VOCAREUM_API_KEY")
+            api_key=os.getenv("OPENAI_API_KEY")
         )
 
         # Create the Energy Advisor agent
@@ -27,7 +27,7 @@ class Agent:
             tools=TOOL_KIT,
         )
 
-    def invoke(self, question: str, context:str=None) -> str:
+    def invoke(self, question: str, context:str="") -> dict:
         """
         Ask the Energy Advisor a question about energy optimization.
         

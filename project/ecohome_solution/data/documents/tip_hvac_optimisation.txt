@@ -1,0 +1,19 @@
+Set dead bands on your thermostat: allow a 2–3°C swing before heating or cooling activates. Prevents short-cycling and saves up to 10% on conditioning costs.
+
+Service filters monthly: a clogged filter forces the blower harder. A neglected filter can cut airflow by 15% and spike energy use.
+
+Seal duct leaks with mastic sealant (not tape) on joints in unconditioned spaces. Ductwork loses 20–30% of conditioned air on average.
+
+Balance supply and return air: rooms with only a supply vent build pressure and push conditioned air out through the building envelope. Add door undercuts or transfer grilles.
+
+Use economiser mode: when outside air is cooler and drier than inside, pull it in directly instead of running refrigerant cooling.
+
+Lower fan speed at night by 20–30%. Fan energy scales with the cube of speed — small reductions yield large savings.
+
+Zone by occupancy, not room count. Don't condition empty rooms to the same set point as occupied ones.
+
+Upgrade to variable-speed drives: fixed-speed compressors run full-tilt or off. Variable-speed units modulate continuously, reducing consumption by 30–50%.
+
+Pre-cool or pre-heat before peak tariff windows. Thermal mass stores heat or cooling cheaply; coast through expensive periods.
+
+Schedule coil cleaning annually. A 0.3mm fouling layer on evaporator or condenser coils can drop system efficiency by 5–8%.

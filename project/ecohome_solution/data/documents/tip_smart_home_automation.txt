@@ -1,0 +1,19 @@
+Use occupancy sensors rather than schedules. PIR sensors react to reality; schedules assume you're home. Cost under £20 each.
+
+Monitor at circuit level, not just whole-house. Sub-metering reveals which loads actually cost you money and exposes phantom loads.
+
+Automate hot water based on usage patterns. Heat water an hour before you typically need it, not all day.
+
+Use GPS geofencing for heating and cooling. Start conditioning 20 minutes before you arrive home; don't run it all day for an empty house.
+
+Implement adaptive lighting scenes dimmed to the minimum comfortable level for each activity. A 60W bulb at 70% brightness draws around 38W.
+
+Run dishwashers, washing machines, and EV chargers overnight on cheaper off-peak tariffs using delay-start functions.
+
+Connect appliances to a smart energy hub that correlates solar output, grid tariff, battery state, and demand — then acts automatically.
+
+Use smart plugs on a schedule to kill standby loads. Devices on standby collectively consume 5–10% of household electricity.
+
+Set the fridge to 3–4°C and freezer to -18°C. Every degree colder costs roughly 5% more energy. Verify with a thermometer.
+
+Automate south-facing blinds to open in winter mornings for passive solar gain, and close in summer to block radiant heat.

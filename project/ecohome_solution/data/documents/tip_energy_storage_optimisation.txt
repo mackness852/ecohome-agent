@@ -1,0 +1,19 @@
+Charge batteries when tariff rates are lowest, not on a fixed clock schedule. Time-of-use tariffs like Agile Octopus have 30-minute pricing slots requiring API integration or a smart controller.
+
+Keep battery state of charge between 20–80%. Operating at the extremes degrades lithium-ion chemistry fastest and can roughly halve usable cycle life.
+
+Size storage to your evening base load, not your solar array. The battery needs to cover sunset to sunrise consumption — not store every panel kWh.
+
+Use peak shaving on commercial premises. A battery capping your highest 15–30 minute demand draw each billing period can eliminate demand charges entirely.
+
+Set a minimum reserve — 20% is a reasonable baseline — as emergency backup. Without a rule, automated systems will discharge to zero.
+
+Monitor round-trip efficiency over time. A healthy lithium system should sit at 90–95%. Dropping below 85% warrants investigation.
+
+Keep batteries in conditioned space where possible. Below 10°C or above 35°C, capacity and efficiency drop materially — a cold Scottish garage costs you 10–15% of rated capacity in winter.
+
+Enable grid frequency response on compatible inverters. Charging when grid frequency is high (surplus generation) and discharging when low is free arbitrage.
+
+Run a full calibration cycle quarterly — a complete discharge and recharge — to keep the battery management system's state-of-charge estimates accurate. Check manufacturer guidance first.
+
+Factor battery replacement into your financial model from day one. Most residential lithium batteries last 12–15 years. The replacement cost significantly affects actual ROI.
